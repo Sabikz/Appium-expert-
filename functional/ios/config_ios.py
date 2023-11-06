@@ -3,7 +3,7 @@ import pytest
 from appium import webdriver
 from appium.webdriver.appium_service import AppiumService
 from appium.webdriver.common.appiumby import AppiumBy
-from functional.ios.PageFactory_ios.settings_ios import *
+from functional.ios.settings_ios import *
 
 
 # HINT: fixtures below could be extracted into conftest.py
