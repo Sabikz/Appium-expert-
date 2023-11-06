@@ -5,7 +5,7 @@ from appium.webdriver.appium_service import AppiumService
 from functional.android.settings_android import *
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture(scope='function')
 def appium_service():
     service = AppiumService()
     service.start(
