@@ -6,8 +6,6 @@ from appium.webdriver.common.appiumby import AppiumBy
 from functional.ios.settings_ios import *
 
 
-# HINT: fixtures below could be extracted into conftest.py
-# HINT: and shared across all tests in the suite
 @pytest.fixture(scope='session')
 def appium_service():
     service = AppiumService()
@@ -26,7 +24,7 @@ def create_ios_driver(custom_opts = None):
     if custom_opts is not None:
         options.load_capabilities(custom_opts)
     # Appium1 points to http://172.16.14.254:4723/wd/hub by default
-    return webdriver.Remote(f'http://{APPIUM_HOST}:{APPIUM_PORT}', options=options)
+    return webdriver.Remote(f'http://{APPIUM_HOST}:{APPIUM_PORT}/wd/hub', options=options)
 
 
 @pytest.fixture

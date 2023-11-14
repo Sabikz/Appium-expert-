@@ -21,7 +21,9 @@ custom_opts = UiAutomator2Options().load_capabilities({
     "appium:deviceName": "R58M33Q95KH",
     "appium:appPackage": "kz.kmf.bankapp",
     "appium:appActivity": ".presentation.ui.view.splash.LogoActivity",
-    "appium:automationName": "UiAutomator2"
+    "appium:automationName": "UiAutomator2",
+    "uiautomator2ServerInstallTimeout": 120000,
+    "adbExecTimeout": 120000,
 })
 
 # for CI/CD
