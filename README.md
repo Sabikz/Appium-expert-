@@ -33,5 +33,5 @@ Installation instructions can be found in [official documentation](https://docs.
 
 To run tests, you need to call pytest specifying the directory to save the report files, and then call allure to generate and provide the report:
 
->```pytest --alluredir="./reports"```
+>```pytest --alluredir="./reports" ; allure serve "./reports"```
 
