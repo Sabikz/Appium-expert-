@@ -13,7 +13,7 @@ class TestFindByAccessibilityID:
     def __init__(self, value):
         self.value = value
 
-    def find_id(self, value)->None:
+    def find_id(self, value):
         with allure.step('Opening android application and find element'):
             el = driver.find_element(AppiumBy.ACCESSIBILITY_ID, value)
             assert el is not None
