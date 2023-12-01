@@ -9,7 +9,7 @@ class AuthPage(TestFindByAccessibilityID):
         self.valid_password = valid_password
 
     def authorize(self):
-        self.find_id('Logo')
-        print('Logo')
+        self.find_acces_id('Logo')
+        #self.find_id('logo_lang_button_kk')
 
 auth_page = AuthPage(value=None, valid_phone=None,valid_password=None)
