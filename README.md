@@ -21,12 +21,12 @@ To activate the virtual environment, use the command:
 To exit the virtual environment, use the command:
 >```deactivate```
 
-## Run test
+## Run test 
 
 > Please note: to be able to publish a report, the allure2 library, version no lower than 2.24.0, must be installed on the local system and available in $PATH.\
 Installation instructions can be found in [official documentation](https://docs.qameta.io/allure-report/#_installing_a_commandline).
 
-## Run test android
+## Run test android without allure report
 
 >```pytest -s -v functional/android./tests./test_android.py```
 

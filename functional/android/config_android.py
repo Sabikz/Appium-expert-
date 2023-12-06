@@ -17,12 +17,6 @@ def appium_service():
     yield service
     service.stop()
 
-def create_android_driver(*args):
-    global driver
-    if custom_opts is not None:
-        driver = webdriver.Remote('http://localhost:4724/wd/hub', options=custom_opts, direct_connection=True)
-    if options_dev is not None:
-        driver = webdriver.Remote(f'http://{APPIUM_HOST}:{APPIUM_PORT}/wd/hub', options=options_dev, direct_connection=True)
-    return driver
 
-driver = create_android_driver(custom_opts, options_dev)
+driver = webdriver.Remote('http://localhost:4724/wd/hub', options=custom_opts, direct_connection=True)
+
