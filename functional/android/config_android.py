@@ -19,4 +19,3 @@ def appium_service():
 
 
 driver = webdriver.Remote('http://localhost:4724/wd/hub', options=custom_opts, direct_connection=True)
-
