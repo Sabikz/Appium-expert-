@@ -1,5 +1,4 @@
 import allure
-
 from functional.android.pages.auth_page import *
 
 

@@ -1,11 +1,10 @@
-from appium.webdriver.common.appiumby import AppiumBy
 
-from functional.android.config_android import *
+from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import allure
-
+from functional.android.settings_android import *
 
 
 class Component:
@@ -20,7 +19,7 @@ class Component:
                 return el
             else:
                 print("Logo is not displayed")
-                driver.quit()
+
 
     def find_id(self, value):
         with allure.step(f'To find element {value}'):
