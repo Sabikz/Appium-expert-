@@ -7,12 +7,11 @@ class AuthPage(Component):
         self.driver = None
         self.valid_phone = valid_phone
         self.valid_password = valid_password
-        self.value = value
 
     def authorize(self):
         self.find_acces_id('Logo')
-        self.find_ids('logo_lang_button_kk')
-        self.find_ids('logo_lang_button_ru')
+        self.is_clickable('logo_lang_button_kk')
+        self.is_clickable('logo_lang_button_ru')
 
 
 

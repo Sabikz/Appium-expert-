@@ -8,7 +8,6 @@ import allure
 
 
 
-
 class Component:
 
     def __init__(self, value):
@@ -31,8 +30,7 @@ class Component:
     def find_ids(self, value):
         with allure.step(f'To find element {value}'):
             elements = driver.find_elements(by=By.ID, value=value)
-            el1 = driver.find_elements(AppiumBy.ID, value)
-            return el1
+            return elements
 
     def is_clickable(self, value):
         with allure.step(f'element to be clickable {value}'):
