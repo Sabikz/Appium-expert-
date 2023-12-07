@@ -9,8 +9,13 @@ class AuthPage(Component):
 
     def authorize(self):
         self.find_acces_id('Logo')
-        self.find_ids('logo_lang_button_kk')
-        self.find_ids('logo_lang_button_ru')
+        self.find_id('logo_lang_button_kk')
+        self.find_id('logo_lang_button_ru')
+        self.find_id('logo_lang_buttons_box')
+
+
+
+
 
 
 
