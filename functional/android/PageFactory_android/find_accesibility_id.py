@@ -1,8 +1,4 @@
-from selenium import webdriver
-from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 import allure
 from functional.android.settings_android import *
 
@@ -31,15 +27,13 @@ class Component:
             elements = driver.find_elements(by=By.ID, value=value)
             return elements
 
-    def is_clickable(self, value):
-        with allure.step(f'element to be clickable {value}'):
-            el = EC.element_to_be_clickable((By.ID, value))
-            return el
-
-    def is_visible(self, value):
-        with allure.step(f'element to be visible {value}'):
-            el = EC.visibility_of_element_located((By.ID, value))
-            return el
+    def find_xpath(self, value):
+        with allure.step(f'To find ACCESSIBILITY_ID {value}'):
+            el = driver.find_element(AppiumBy.XPATH, value)
+            if el.is_displayed():
+                return el
+            else:
+                print(f"{value} is not displayed")
 
 
 
