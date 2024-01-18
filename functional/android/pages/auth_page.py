@@ -13,7 +13,7 @@ class AuthPage(Component):
         self.find_acces_id('Logo')
         lang_kz = self.find_xpath("//*[@resource-id='logo_lang_button_kk']")
         lang_ru = self.find_xpath("//*[@resource-id='logo_lang_button_ru']")
-        lang_ru.click()
+        lang_kz.click()
 
         '''Check main page'''
         sign_in = self.find_xpath("//*[@resource-id='sign_in_button']")
@@ -74,29 +74,24 @@ class AuthPage(Component):
         connection_bank.click()
 
         self.find_acces_id('Navigation back button')
-        time.sleep(1)
         short_phone = self.find_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.'
                                    'FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]')
         short_phone.click()
-        time.sleep(0.5)
         self.find_xpath("//*[@resource-id='com.samsung.android.dialer:id/digits']")
         driver.press_keycode(4)
         driver.press_keycode(4)
         mobile_phone = self.find_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget'
                                        '.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]')
         mobile_phone.click()
-        time.sleep(0.5)
         self.find_xpath("//*[@resource-id='com.samsung.android.dialer:id/digits']")
         driver.press_keycode(4)
         driver.press_keycode(4)
         bussines_phone = self.find_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.'
                                          'FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View[3]')
         bussines_phone.click()
-        time.sleep(0.5)
         self.find_xpath("//*[@resource-id='com.samsung.android.dialer:id/digits']")
         driver.press_keycode(4)
         driver.press_keycode(4)
-        time.sleep(0.5)
         self.find_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout'
                         '/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]').click()
 
