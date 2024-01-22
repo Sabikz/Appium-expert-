@@ -1,29 +1,23 @@
-import time
-
-import allure
-from selenium import webdriver
+from appium import webdriver
+from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 import pyautogui
-from functional.android.settings_android import *
+from functional.android.PageFactory_android.config_android import *
 
 
 class Component:
 
-    def __init__(self, value):
+    def __init__(self, value=None):
         self.value = value
 
-    def find_acces_id(self, value):
-        el = driver.find_element(AppiumBy.ACCESSIBILITY_ID, value)
-        if el.is_displayed() is True:
-            return el
-        else:
-            pass
+    def find_acces_id(self, value, driver):
+        return driver.find_element(AppiumBy.ACCESSIBILITY_ID, value=value)
 
 
-    def find_xpath(self, value):
+    def find_xpath(self, value, driver):
         try:
             # el = driver.find_element(AppiumBy.XPATH, value)
             el = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, value)))

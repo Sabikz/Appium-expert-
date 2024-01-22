@@ -14,9 +14,10 @@ APPIUM_LOCAL_HOST = 'localhost'
 
 
 options = XCUITestOptions().load_capabilities({
-    'platformName': 'iOS',
-    'platformVersion': '13.4',
-    'deviceName': 'R58M33Q95KH',
-    'app': '/full/path/to/app/UICatalog.app.zip',
-    'automationName': 'XCUITest'
+    "platformName": "IOS",
+    "appium:platformVersion": "16.3.1",
+    "appium:deviceName": "Lord",
+    "appium:udid": "00008030-000919540A47802E",
+    "appium:app": "",
+    "appium:automationName": "XCUITest"
 })
